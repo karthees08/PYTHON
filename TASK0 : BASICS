@@ -1,0 +1,79 @@
+#Addition with user input
+
+a=input("Enter number:")
+b=input("Enter number:")
+print(a+b)
+
+
+
+a=int(input("Enter A:"))
+b=int(input("Enter B:"))
+print(a+b)
+
+
+#datatypes
+
+a=10
+print(type(a))
+b=9.6
+print(type(b))
+c=2+3j
+print(type(c))
+d='HI Hello'
+print(type(d))
+e=True
+print(type(e))
+
+
+
+#arithmetic operator
+
+a=int(input("Enter a value for A:"))
+b=int(input("Enter a value for B:"))
+
+print(a+b)
+print(a-b)
+print(a*b)
+print(a/b)
+print(a//b)
+print(a%b)
+print(a**b)
+
+
+#relational or conditional operator
+
+a=int(input("Enter a value for A:"))
+b=int(input("Enter a value for B:"))
+
+print(a>b)
+print(a<b)
+print(a==b)
+print(a!=b)
+print(a>=b)
+print(a<=b)
+
+
+
+#logical operators
+
+a=int(input("Enter a value for A:"))
+b=int(input("Enter a value for B:"))
+
+print(a > 0 and b > 0)
+print(a > 0 or b > 0)
+print(not(a > 0))
+print(not(b > 0))
+
+
+#bitwise operator
+
+a=int(input("Enter a value for A:"))
+b=int(input("Enter a value for B:"))
+
+
+
+print(a & b)
+print(a | b)
+print(~a)
+print(~b)
+print(a^b)
