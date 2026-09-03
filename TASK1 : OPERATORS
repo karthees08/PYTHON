@@ -1,0 +1,90 @@
+#to find last digit of number(QN1)
+
+a=int(input("Enter the value of a:"))
+print(a%10)
+
+
+#to find last digit of number(QN2)
+
+a=int(input("Enter the value of a:"))
+print(a//10)
+
+
+#to find last two digits of (QN3)
+
+
+a=int(input("Enter the value of a:"))
+print(a%100)
+
+
+#square the middle digit of a 5 digit number(QN4)
+
+a=int(input("Enter a 5 digit number:"))
+
+
+a=a//100
+print(a)
+
+a=a%10
+print(a)
+
+a=a**2
+print("the square of the middle digit is :",a)
+
+
+#bmi calculator(QN5)
+
+w=int(input("Enter weight:"))
+h=int(input("Enter height in cm:"))
+bmi=w/((h/100)**2)
+print("BMI:",bmi)
+
+
+#Expandig the given numbers(QN6)
+n = int(input("Enter a 4 digit number: "))
+
+a = n // 1000
+b = (n // 100) % 10
+c = (n // 10) % 10
+d = n % 10
+
+print(a * 1000, "+", b * 100, "+", c * 10, "+", d)
+
+
+#volume of cylinder(QN7)
+
+r=int(input("Enter the radius:"))
+height=int(input("Enter the height:"))
+v=3.14*r*r*height
+
+print("Volume of the cylinder is :",v)
+
+
+#volume of cuboid(QN8)
+
+l=int(input("Enter the length:"))
+b=int(input("Enter the breadth:"))
+h=int(input("Enter the height:"))
+v=l*b*h
+
+print("Volume of the cuboid is :",v)
+
+
+#convert centimeter to meter(QN9)
+
+c=int(input("Enter the value in cm:"))
+m=c/100
+
+
+print("meter =",m)
+
+
+#calculate speed(QN10)
+
+d=int(input("Enter the distance:"))
+
+t=int(input("Enter the time:"))
+
+s=d/t
+
+print("Speed:",s)
