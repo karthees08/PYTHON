@@ -1,0 +1,153 @@
+#1.Check if a number is even or odd.
+'''
+a=int(input("Enter the number:"))
+if a%2==0:
+    print("The given number is EVEN")
+else:
+    print("The given number is ODD")
+'''
+
+#2.Write a program to check if a number is positive, negative if not print zero.
+'''
+a=int(input("Enter the number:"))
+if a>0:
+    print("The number is Positive")
+elif a==0:
+    print("The number is Zero")
+else:
+    print("The number is Negative")
+
+'''
+
+#3.Check if the number is divisible by both 2 and 5, and display the result.
+'''
+a=int(input("Enter the number:"))
+if a%2==0 and a%5==0:
+    print("The number is divisible by both 2 and 5")
+    res1=a/2
+    res2=a/5
+    print("The result divided by 2 and 5 are:",res1,res2)
+else:
+    print("The number is not divisible by both 2 and 5")
+'''
+#4.Input marks of a student with a 5 grades.
+'''
+mark = int(input("Enter the mark: "))
+
+if mark >= 90:
+    print("Grade A")
+elif mark >= 80:
+    print("Grade B")
+elif mark >= 70:
+    print("Grade C")
+elif mark >= 60:
+    print("Grade D")
+else:
+    print("Grade E")
+'''
+
+#5.Input a year and check if it’s a Leap Year using nested conditions:
+'''
+year = int(input("Enter the year: "))
+
+if year % 4 == 0:
+    if year % 100 == 0:
+        if year % 400 == 0:
+            print("Leap Year")
+        else:
+            print("Not a Leap Year")
+    else:
+        print("Leap Year")
+else:
+    print("Not a Leap Year")
+'''
+
+#6.Print numbers from 1 to 10.
+'''
+for i in range(1,11):
+    print(i)
+'''
+
+#7.Print numbers from 1 to 10 and square them.
+'''
+for i in range(1,11):
+    print(i,i*i)
+'''    
+#8.Print numbers from 10 to 1 in reverse order
+'''
+for i in range(10,0,-1):
+    print(i)
+'''
+
+#9.Age Category:
+'''
+a=int(input("Enter AGE:"))
+if a>0 and a<=12:
+    print("Child")
+elif a>12 and a<=19:
+    print("Teen")
+elif a>19 and a<=59:
+    print("Adult")
+else:
+    print("Senior")
+'''
+
+#10.Write a program that takes a number as input and checks if its cube is greater than 100. Display whether it is above or below/equal to 100
+'''
+a=int(input("Enter a number:"))
+b=a*a*a
+if b>100:
+    print("The number is above 100")
+elif b==100:
+    print("The number is equal to 100")
+else:
+    print("The number is less than 100")
+'''
+
+#11.Login system:
+'''
+username="Spidey"
+password="Spiderman"
+
+a=input("Enter the username:")
+b=input("Enter the password:")
+
+if a==username and b==password :
+    print("Login successful")
+else:
+    print("User name and password incorrect")
+'''
+
+#12.Check if a character is a vowel or consonant.
+'''
+v="aeiouAEIOU"
+a=input("Enter a character:")
+if a in v:
+    print("The given character is vowel:")
+else:
+    print("The given character is Consonant:")
+'''
+
+#13.Print first sum of n natural numbers
+'''
+a = int(input("Enter the n: "))
+sum = 0
+
+for i in range(1, a + 1):
+    sum = sum + i
+
+print("Sum =", sum)
+'''
+
+#14.print A to Z
+'''
+for i in range(65, 91):
+    print(chr(i))
+'''
+
+#15.Print tables
+'''
+a=int(input("Enter the table you want to enter:"))
+for i in range(1,13):
+    print(a,"*",i,"=",a*i)
+'''
