@@ -1,0 +1,303 @@
+#1.Write a Python program to calculate an electricity bill based on the number of units consumed.
+'''
+units = int(input("Enter the number of units consumed: "))
+
+if units <= 100:
+    bill = units * 1.5
+elif units <= 200:
+    bill = (100 * 1.5) + ((units - 100) * 2.5)
+elif units <= 300:
+    bill = (100 * 1.5) + (100 * 2.5) + ((units - 200) * 4)
+else:
+    bill = (100 * 1.5) + (100 * 2.5) + (100 * 4) + ((units - 300) * 5)
+
+print("Electricity Bill =", bill)
+'''
+
+#2.Online Shopping Discount
+'''
+amount = float(input("Enter the purchase amount: "))
+
+if amount >= 5000:
+    discount = amount * 0.20
+elif amount >= 3000:
+    discount = amount * 0.15
+elif amount >= 1000:
+    discount = amount * 0.10
+else:
+    discount = 0
+
+final_price = amount - discount
+
+print("Discount =", discount)
+print("Final Price =", final_price)
+'''
+
+
+#3.ATM Withdrawal
+'''
+balance = 10000
+
+amount = int(input("Enter the amount to withdraw: "))
+
+if amount <= 0:
+    print("Invalid amount")
+elif amount > balance:
+    print("Insufficient balance")
+else:
+    balance = balance - amount
+    print("Withdrawal successful")
+    print("Remaining balance =", balance)
+'''
+
+#4.Student Grade
+'''
+marks = int(input("Enter the marks: "))
+
+if marks >= 90:
+    grade = "A"
+elif marks >= 80:
+    grade = "B"
+elif marks >= 70:
+    grade = "C"
+elif marks >= 60:
+    grade = "D"
+elif marks >= 50:
+    grade = "E"
+else:
+    grade = "F"
+
+print("Grade =", grade)
+'''
+
+#5. Traffic Signal
+'''
+signal = input("Enter the traffic signal: ")
+
+if signal == "Red":
+    print("Stop")
+elif signal == "Yellow":
+    print("Get Ready")
+elif signal == "Green":
+    print("Go")
+else:
+    print("Invalid signal")
+'''
+#6. Temperature Alert
+'''
+temperature = float(input("Enter the temperature: "))
+
+if temperature >= 40:
+    print("Critical Temperature Alert!")
+else:
+    print("Temperature is Normal")
+'''
+
+
+#7. Login System — Three Attempts
+'''
+correct_password = "python123"
+
+for i in range(3):
+    password = input("Enter password: ")
+
+    if password == correct_password:
+        print("Login Successful")
+        break
+    else:
+        print("Incorrect Password")
+
+else:
+    print("Account Locked")
+'''
+#8. Multiplication Table 1 to 10
+'''
+num = int(input("Enter a number: "))
+
+for i in range(1, 11):
+    print(num, "x", i, "=", num * i)
+'''
+
+#9. Mobile Data Usage — 7 Days
+'''
+total = 0
+limit = 2
+
+for i in range(1, 8):
+    data = float(input("Enter data usage for day " + str(i) + ": "))
+    total = total + data
+
+    if data > limit:
+        print("Alert: Daily limit exceeded!")
+
+average = total / 7
+
+print("Total data usage =", total, "GB")
+print("Average data usage =", average, "GB")
+'''
+
+
+#10. Parking Charges
+'''
+hours = int(input("Enter the number of hours parked: "))
+
+if hours <= 2:
+    charge = 20
+elif hours <= 5:
+    charge = 50
+elif hours <= 10:
+    charge = 100
+else:
+    charge = 150
+
+print("Parking Charge =", charge)
+'''
+
+#11. Prime Number
+'''
+num = int(input("Enter a number: "))
+
+if num <= 1:
+    print("Not a Prime Number")
+else:
+    prime = True
+
+    for i in range(2, num):
+        if num % i == 0:
+            prime = False
+            break
+
+    if prime:
+        print("Prime Number")
+    else:
+        print("Not a Prime Number")
+'''
+
+#12. Food Ordering System
+'''
+total = 0
+
+while True:
+    print("\n1. Pizza - Rs.200")
+    print("2. Burger - Rs.100")
+    print("3. Sandwich - Rs.80")
+    print("4. Exit")
+
+    choice = int(input("Enter your choice: "))
+
+    if choice == 1:
+        total = total + 200
+        print("Pizza added")
+    elif choice == 2:
+        total = total + 100
+        print("Burger added")
+    elif choice == 3:
+        total = total + 80
+        print("Sandwich added")
+    elif choice == 4:
+        break
+    else:
+        print("Invalid choice")
+
+print("Total Bill =", total)
+'''
+
+#13. Attendance of 10 Employees
+'''
+present = 0
+absent = 0
+
+for i in range(1, 11):
+    status = input("Enter attendance for employee " + str(i) + " (P/A): ")
+
+    if status == "P":
+        present = present + 1
+    elif status == "A":
+        absent = absent + 1
+
+print("Present Employees =", present)
+print("Absent Employees =", absent)
+'''
+
+#14.Fuel Bill for Multiple Customers
+'''
+price = 100
+
+while True:
+    quantity = float(input("Enter fuel quantity in litres: "))
+
+    if quantity == 0:
+        break
+
+    bill = quantity * price
+
+    print("Fuel Bill =", bill)
+'''
+#15. Bus Ticket Charges Based on Age
+'''
+while True:
+    age = int(input("Enter passenger age: "))
+
+    if age == 0:
+        break
+
+    if age < 5:
+        charge = 0
+    elif age <= 12:
+        charge = 50
+    elif age >= 60:
+        charge = 40
+    else:
+        charge = 100
+
+    print("Ticket Charge =", charge)
+'''
+#16. Number Pattern
+'''
+for i in range(5, 0, -1):
+    for j in range(1, i + 1):
+        print(j, end="")
+    print()
+
+    '''
+#17. Diamond Pattern Using *
+'''
+n = 5
+
+for i in range(1, n + 1):
+    print(" " * (n - i) + "* " * i)
+
+for i in range(n - 1, 0, -1):
+    print(" " * (n - i) + "* " * i)
+'''
+
+#18. Hollow Pyramid Using *
+'''
+n = 5
+
+for i in range(1, n + 1):
+    print(" " * (n - i), end="")
+
+    for j in range(1, 2 * i):
+        if j == 1 or j == 2 * i - 1 or i == n:
+            print("*", end="")
+        else:
+            print(" ", end="")
+
+    print()
+'''
+#19. Alphabet Pattern
+'''
+for i in range(1, 6):
+    for j in range(i):
+        print(chr(65 + j), end="")
+    print()
+'''
+
+#20. Inverted Pyramid Using *
+'''
+n = 5
+
+for i in range(n, 0, -1):
+    print("* " * i)
+'''
