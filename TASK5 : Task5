@@ -1,0 +1,300 @@
+# OPERATORS
+
+
+# 1. Swapping using bitwise operators without using 3rd variable
+
+a = int(input("Enter a: "))
+b = int(input("Enter b: "))
+
+a = a ^ b
+b = a ^ b
+a = a ^ b
+
+print("After swapping:")
+print("a =", a)
+print("b =", b)
+
+
+
+# 2. To find last 2 digits of the given number
+
+n = int(input("Enter a number: "))
+
+last_two = n % 100
+
+print("Last two digits:", last_two)
+
+
+
+# 3. To find middle digit of the number
+
+n = int(input("Enter a 3-digit number: "))
+
+middle = (n // 10) % 10
+
+print("Middle digit:", middle)
+
+
+
+
+# 4. Five-digit number - square the middle digit
+# ==========================================
+
+n = int(input("Enter a five-digit number: "))
+
+middle = (n // 100) % 10
+square = middle * middle
+
+print("Number:", n)
+print("Square of middle digit:", square)
+
+
+# 5. To find last digit of the number
+
+
+n = int(input("Enter a number: "))
+
+last = n % 10
+
+print("Last digit:", last)
+
+
+
+# IF-ELSE
+
+# 1. Check whether the shape is square or rectangle
+
+length = int(input("Enter length: "))
+breadth = int(input("Enter breadth: "))
+
+if length == breadth:
+    print("It is a square")
+else:
+    print("It is a rectangle")
+
+
+
+# 2. Check whether square is above 50 or below 50
+n = int(input("Enter a number: "))
+
+square = n * n
+
+if square > 50:
+    print("Square is above 50")
+else:
+    print("Square is below 50")
+
+
+
+# 3. Subtract two numbers and check difference
+
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+difference = a - b
+
+if difference == 0:
+    print("Difference is 0")
+else:
+    print("Difference is not 0")
+
+
+# 4. Check whether student passed or failed
+
+mark = int(input("Enter Computer Science mark: "))
+
+if mark >= 50:
+    print("Passed")
+else:
+    print("Failed")
+
+
+# 5. Check whether number is divisible by 10
+
+n = int(input("Enter a number: "))
+
+if n % 10 == 0:
+    print("Number is divisible by 10")
+else:
+    print("Number is not divisible by 10")
+
+# 6. Find the biggest digit in a two-digit number
+
+n = int(input("Enter a two-digit number: "))
+
+first = n // 10
+second = n % 10
+
+if first > second:
+    print("Biggest digit:", first)
+else:
+    print("Biggest digit:", second)
+
+
+# 7. Check whether value is 1
+
+value = int(input("Enter a value: "))
+
+if value == 1:
+    print("You can go out and play")
+else:
+    print("You cannot go out and play")
+
+
+# 8. Check the choice
+
+choice = int(input("Enter your choice: "))
+
+if choice == 1:
+    print("The exam will be easy")
+else:
+    print("The exam will be difficult")
+
+
+# 9. Basic Calculator
+
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+
+operator = input("Enter operator (+, -, x, /): ")
+
+if operator == "+":
+    result = a + b
+    print("Result:", result)
+
+elif operator == "-":
+    result = a - b
+    print("Result:", result)
+
+elif operator == "x":
+    result = a * b
+    print("Result:", result)
+
+elif operator == "/":
+    if b != 0:
+        result = a / b
+        print("Result:", result)
+    else:
+        print("Cannot divide by zero")
+
+else:
+    print("Invalid operator")
+
+
+# 10. Parcel Charges
+
+weight = int(input("Enter weight of parcel in grams: "))
+booking = input("Enter type of booking (O for Ordinary, E for Express): ")
+
+if weight <= 100:
+    if booking == "O":
+        charge = 80
+    else:
+        charge = 100
+
+elif weight <= 500:
+    if booking == "O":
+        charge = 150
+    else:
+        charge = 200
+
+elif weight <= 1000:
+    if booking == "O":
+        charge = 210
+    else:
+        charge = 250
+
+else:
+    if booking == "O":
+        charge = 250
+    else:
+        charge = 300
+
+print("Parcel charge: ₹", charge)
+
+
+# 11. Laptop Discount
+
+price = float(input("Enter laptop price: "))
+
+if price <= 50000:
+    discount_rate = 0
+
+elif price <= 100000:
+    discount_rate = 10
+
+elif price <= 150000:
+    discount_rate = 15
+
+else:
+    discount_rate = 15
+
+discount = price * discount_rate / 100
+final_price = price - discount
+
+print("Discount:", discount)
+print("Final price:", final_price)
+
+
+# 12. Library Fine Calculation
+
+
+class Library:
+
+    def get_fine(self):
+        days = int(input("Enter number of late days: "))
+
+        if days <= 5:
+            fine = days * 0.40
+
+        elif days <= 10:
+            fine = (5 * 0.40) + ((days - 5) * 0.65)
+
+        else:
+            fine = (5 * 0.40) + (5 * 0.65) + ((days - 10) * 0.80)
+
+        print("Fine: ₹", fine)
+
+
+library = Library()
+library.get_fine()
+
+
+# 13. Buzz Number
+
+class BuzzNumber:
+
+    def check(self):
+        n = int(input("Enter a number: "))
+
+        if n % 10 == 7 or n % 7 == 0:
+            print("It is a Buzz Number")
+        else:
+            print("It is not a Buzz Number")
+
+
+buzz = BuzzNumber()
+buzz.check()
+
+
+# 14. Automorphic Number
+
+n = int(input("Enter a number: "))
+
+square = n * n
+
+if square % (10 ** len(str(n))) == n:
+    print("It is an Automorphic Number")
+else:
+    print("It is not an Automorphic Number")
+
+
+# 15. Check whether character is capital letter
+
+ch = input("Enter a character: ")
+
+if ch >= 'A' and ch <= 'Z':
+    print("It is a capital letter")
+else:
+    print("It is not a capital letter")
